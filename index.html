@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2a0e22" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style>
+    </noscript>
+    <title>Feliz Cumpleaños</title>
+  </head>
+
+  <body>
+    <!-- Ambient background: gradient handled in CSS, subtle confetti drawn on canvas -->
+    <canvas id="confetti-canvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <audio id="bg-audio" loop preload="none"></audio>
+    <button id="music-toggle" class="music-btn" type="button" aria-label="Reproducir música" aria-pressed="false">
+      <i class="bx bx-music"></i>
+    </button>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <p class="hero-kicker" id="hero-kicker">Para Johe</p>
+        <h1 class="hero-title" aria-label="Happy Birthday">
+          <span class="hero-line" style="--d:0">Happy</span>
+          <span class="hero-line" style="--d:1">Birthday</span>
+        </h1>
+        <p class="hero-name" id="hero-name">Johenderlys</p>
+        <p class="hero-message" id="hero-message">Mensaje secundario aquí.</p>
+        <button class="scroll-cue" id="scroll-cue" type="button" aria-label="Bajar al pastel">
+          <span class="scroll-cue-dot"></span>
+        </button>
+      </section>
+
+      <!-- STAGE: cake, gift, photo -->
+      <section class="stage" id="stage">
+        <div class="stage-glow" aria-hidden="true"></div>
+        <div class="stage-inner">
+          <div class="photo-column">
+            <div class="photo-frame" id="photo-frame">
+              <img id="photo-img" class="photo-img" alt="Foto de la celebración" />
+              <div class="photo-placeholder" id="photo-placeholder">
+                <i class="bx bx-image-add"></i>
+                <span>Tu foto aquí</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-column">
+            <div class="table">
+              <div class="cake" id="cake">
+                <button class="candle" id="candle" type="button" aria-pressed="true" aria-label="Apagar o encender la vela">
+                  <span class="flame" id="flame"></span>
+                  <span class="wick"></span>
+                </button>
+                <div class="cake-tier cake-tier--top">
+                  <span class="icing"></span>
+                </div>
+                <div class="cake-tier cake-tier--bottom">
+                  <span class="icing"></span>
+                  <span class="drip drip-1"></span>
+                  <span class="drip drip-2"></span>
+                  <span class="drip drip-3"></span>
+                </div>
+                <div class="cake-plate"></div>
+              </div>
+              <p class="cake-hint" id="cake-hint">Toca la vela para pedir un deseo</p>
+            </div>
+
+            <div class="gift-wrap">
+              <button class="gift" id="gift" type="button" aria-label="Abrir el regalo" aria-expanded="false">
+                <span class="gift-lid"></span>
+                <span class="gift-ribbon-v"></span>
+                <span class="gift-ribbon-h"></span>
+                <span class="gift-box"></span>
+              </button>
+              <p class="gift-hint">Toca el regalo</p>
+              <div class="gift-note" id="gift-note" hidden>
+                <p id="gift-note-text"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETTER -->
+      <section class="letter-section" id="letter-section">
+        <h2 class="section-title">4 u </h2>
+        <div class="envelope" id="envelope" tabindex="0" role="button" aria-expanded="false" aria-label="Abrir la carta">
+          <div class="envelope-back"></div>
+          <div class="letter-paper" id="letter-paper">
+            <p id="letter-text" class="letter-text"></p>
+            <p class="letter-sign" id="letter-sign"></p>
+          </div>
+          <div class="envelope-flap" id="envelope-flap"></div>
+          <div class="envelope-seal">
+            <i class="bx bxs-heart"></i>
+          </div>
+        </div>
+        <p class="envelope-hint">Toca el sobre para leerla bestia</p>
+      </section>
+
+
+
+
+      <footer class="site-footer">
+        <p>Hecho con cariño <i class="bx bxs-heart"></i></p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
