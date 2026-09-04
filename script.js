@@ -10,7 +10,7 @@ const birthdayConfig = {
 
   // Main photo shown in the framed card next to the cake.
   // Leave as "" (or a path that doesn't exist) to show the elegant placeholder instead.
-  photo: "photo.jpg",
+  photo: "Photo.jpg",
 
   // Message revealed when the gift is opened.
   giftMessage: "Felicicades mi vida, que DIOS te de todo y mas, es lo que mereces.",
